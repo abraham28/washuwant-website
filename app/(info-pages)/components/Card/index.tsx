@@ -2,6 +2,7 @@ import React from "react";
 import { Button } from "react-bootstrap";
 import styles from "./Card.module.scss";
 import Image from "next/image";
+import { LAUNDRY_MONITOR_LINK } from "@/app/constants";
 
 interface CardProps {
   title: string;
@@ -64,7 +65,9 @@ const Card: React.FC<CardProps> = ({
           <></>
         ) : (
           <div className={styles.listItem}>
-            <Button>Avail Service</Button>
+            <Button href={LAUNDRY_MONITOR_LINK} target="_blank">
+              Avail Service
+            </Button>
           </div>
         )}
       </div>

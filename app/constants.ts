@@ -1,5 +1,11 @@
+export const LAUNDRY_MONITOR_LINK = "https://laundry.abrasoft.com/";
 export const FACEBOOK_LINK = "https://www.facebook.com/washuwant";
-export const EMAIL_ADDRESS = "abraham.guerrero@washuwant.com";
+export const FACEBOOK_LINK_TEXT = "facebook.com/WashUWant";
+export const EMAIL_ADDRESS = "thelaundrytruth@gmail.com";
+export const PHYSICAL_ADDRESS =
+  "042 Pugong Ginto St. Brgy. Santa Monica, Novaliches, Quezon City";
+export const PHONE_NUMBER = "(+63) 976-253-1732";
+export const TEL_NUMBER = "(028) 638-9866";
 export const CONTACT_NUMBER = "(+63) 915-654-9303";
 
 export const locales = ["en", "tl"];

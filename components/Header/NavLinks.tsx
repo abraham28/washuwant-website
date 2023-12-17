@@ -29,7 +29,7 @@ const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
           </Link>
         );
       })}
-      <Link href={"https://laundry.abrasoft.com/login"} target="_blank">
+      <Link href={constants.LAUNDRY_MONITOR_LINK} target="_blank">
         <div className={styles.loginButton}>
           <Button>Login/Register</Button>
         </div>

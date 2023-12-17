@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import styles from "./ContactSection.module.scss";
 import Link from "next/link";
 import Maps from "../Maps";
+import * as constants from "@/app/constants";
 
 const ContactSection = () => {
   return (
@@ -12,9 +13,7 @@ const ContactSection = () => {
         <Row className={styles.row}>
           <Col lg={6}>
             <h3>Address</h3>
-            <p>
-              #042 Pugong Ginto St. Brgy. Santa Monica, Novaliches, Quezon City
-            </p>
+            <p>{constants.PHYSICAL_ADDRESS}</p>
 
             <h3>Working Hours</h3>
             <p>8 AM to 8 PM</p>
@@ -22,9 +21,24 @@ const ContactSection = () => {
             <p>Drop off and Pick-up upto 8 PM</p>
 
             <h3>Contact Channels</h3>
-            <p>Phone: 0976-253-1732</p>
-            <p>Tel: 028-638-9866</p>
-            <p>Facebook: facebook.com/WashUWant</p>
+            <p>
+              Phone:&nbsp;
+              <Link href={`tel:${constants.PHONE_NUMBER}`}>
+                {constants.PHONE_NUMBER}
+              </Link>
+            </p>
+            <p>
+              Tel:&nbsp;
+              <Link href={`tel:${constants.TEL_NUMBER}`}>
+                {constants.TEL_NUMBER}
+              </Link>
+            </p>
+            <p>
+              Facebook:&nbsp;
+              <Link href={constants.FACEBOOK_LINK} target="_blank">
+                {constants.FACEBOOK_LINK_TEXT}
+              </Link>
+            </p>
           </Col>
 
           <Col lg={6}>
@@ -37,7 +51,7 @@ const ContactSection = () => {
                 https://maps.app.goo.gl/ek3uBkQmeBAGxFwr6
               </Link>
             </p>
-            <Maps />
+            <Maps className={styles.mapContainer} />
           </Col>
         </Row>
       </Container>

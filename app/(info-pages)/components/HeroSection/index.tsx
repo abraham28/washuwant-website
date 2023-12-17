@@ -2,6 +2,7 @@ import React from "react";
 import { Button, Container } from "react-bootstrap";
 import styles from "./HeroSection.module.scss";
 import Image from "next/image";
+import { LAUNDRY_MONITOR_LINK } from "@/app/constants";
 
 const HeroSection = () => {
   return (
@@ -19,7 +20,11 @@ const HeroSection = () => {
               nakaplastic na yan
             </p>
             <div className={styles.primaryButton}>
-              <Button className={styles.monitorNow}>
+              <Button
+                className={styles.monitorNow}
+                href={LAUNDRY_MONITOR_LINK}
+                target="_blank"
+              >
                 Go to Laundry Monitor
               </Button>
             </div>
@@ -35,7 +40,12 @@ const HeroSection = () => {
             na itong i pick-up
           </p>
           <div className={styles.secondaryButton}>
-            <Button variant="secondary" className={styles.monitorNow}>
+            <Button
+              variant="secondary"
+              className={styles.monitorNow}
+              href={LAUNDRY_MONITOR_LINK}
+              target="_blank"
+            >
               Monitor Now!
             </Button>
           </div>
@@ -52,23 +62,6 @@ const HeroSection = () => {
       </Container>
     </Container>
   );
-  // return (
-  //   <section className={styles.hero}>
-  //     <Container className={styles.container}>
-  //       <h1>
-  //         Turning Ideas into <span>Reality</span>
-  //       </h1>
-  //       <p>
-  //         Discover tailored software solutions for every industry. Elevate your
-  //         business with high-value technology and innovation.
-  //       </p>
-  //       <div>
-  //         <Button variant="primary">Get in Touch</Button>
-  //         <Button variant="secondary">Learn More</Button>
-  //       </div>
-  //     </Container>
-  //   </section>
-  // );
 };
 
 export default HeroSection;
