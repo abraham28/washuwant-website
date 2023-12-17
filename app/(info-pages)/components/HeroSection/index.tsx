@@ -17,7 +17,7 @@ const HeroSection = () => {
             </h2>
             <p className={styles.iwanMoNalang}>
               Iwan mo nalang yung laundry mo kami na mag lalaba, pag balik mo
-              nakaplastic na yan
+              ready na yan!
             </p>
             <div className={styles.primaryButton}>
               <Button
@@ -36,8 +36,8 @@ const HeroSection = () => {
             </span>
           </h3>
           <p className={styles.pwedeMoNa}>
-            Pwede mo na din ma monitor ang laundry mo para malaman kung pwede mo
-            na itong i pick-up
+            Pwede mo din imonitor ang laundry mo para malaman kung pwede mo na
+            silang balikan! ;&#41;
           </p>
           <div className={styles.secondaryButton}>
             <Button

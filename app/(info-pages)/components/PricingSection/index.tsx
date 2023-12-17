@@ -23,7 +23,7 @@ const PricingSection = () => {
             ]}
           />
           <Card
-            title="Full Package"
+            title="Self Service"
             price="₱128"
             imageSrc="/images/diy.png"
             inclusions={[
