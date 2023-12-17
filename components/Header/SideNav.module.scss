@@ -1,3 +1,21 @@
+.sideNavWrapper {
+  z-index: 998;
+  position: fixed;
+  inset: 0;
+  background: rgb(255 255 255 / 35.6%);
+  cursor: auto;
+  transition: opacity 0.2s;
+  width: 0;
+
+  @media screen and (width >= 992px) {
+    display: none;
+  }
+}
+
+.open {
+  width: 100%;
+}
+
 .sideNav {
   z-index: 999;
   position: fixed;
@@ -7,21 +25,16 @@
   background: linear-gradient(180deg, rgb(255 255 255 / 83.6%), #fff);
   backdrop-filter: var(--base-blur);
   overflow-x: hidden;
+  width: 0;
   transition:
     opacity 0.2s,
     width 0.2s;
-  opacity: 0;
-  width: 0;
-  cursor: auto;
-
-  @media screen and (width >= 992px) {
-    display: none;
-  }
 }
 
-.open {
+.sideNavOpen {
+  display: grid;
+  grid-template-rows: min-content min-content;
   width: 250px;
-  opacity: 1;
 }
 
 .actionContainer {
@@ -47,4 +60,5 @@
 
 .footer {
   text-align: center;
+  align-self: flex-end;
 }

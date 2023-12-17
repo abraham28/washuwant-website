@@ -1,5 +1,5 @@
 "use client";
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import { FaTimes } from "react-icons/fa";
 import styles from "./SideNav.module.scss";
 
@@ -18,31 +18,37 @@ const SideNav: React.FC<SideNavProps> = ({ open, onClose }) => {
 
   useOutsideClick(sideNavRef, onClose);
 
+  useEffect(() => {
+    document.body.style.overflow = open ? "hidden" : "unset";
+  }, [open]);
+
   return (
-    <div
-      ref={sideNavRef}
-      className={`${styles.sideNav}${open ? ` ${styles.open}` : ""}`}
-    >
-      <div className={styles.actionContainer}>
-        <div className={styles.g1173412}>
-          <Image
-            width={0}
-            height={60}
-            className={styles.g1173411Icon}
-            alt=""
-            src="/images/washuwant-banner.png"
-          />
+    <div className={`${styles.sideNavWrapper}${open ? ` ${styles.open}` : ""}`}>
+      <div
+        ref={sideNavRef}
+        className={`${styles.sideNav} ${open ? ` ${styles.sideNavOpen}` : ""}`}
+      >
+        <div className={styles.actionContainer}>
+          <div className={styles.g1173412}>
+            <Image
+              width={0}
+              height={60}
+              className={styles.g1173411Icon}
+              alt=""
+              src="/images/washuwant-banner.png"
+            />
+          </div>
+          <span className={styles.closeButton} onClick={onClose}>
+            <FaTimes size={32} color="var(--secondary)" />
+          </span>
         </div>
-        <span className={styles.closeButton} onClick={onClose}>
-          <FaTimes size={32} color="var(--secondary)" />
-        </span>
+        <div className={styles.linksContainer}>
+          <NavLinks onClick={onClose} />
+        </div>
+        <div className={styles.footer}>{constants.COPYRIGHT}</div>
       </div>
-      <div className={styles.linksContainer}>
-        <NavLinks onClick={onClose} />
-      </div>
-      <div className={styles.footer}>{constants.COPYRIGHT}</div>
     </div>
   );
 };
 
-export default SideNav;
+export default React.memo(SideNav);
