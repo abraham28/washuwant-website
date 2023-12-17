@@ -1,7 +1,7 @@
 .link {
   font-size: 18px;
   color: var(--primary);
-  padding: 8px 16px;
+  padding: var(--padding-5xs) var(--padding-base);
   text-decoration: none;
 
   &:hover {
@@ -15,4 +15,5 @@
 
 .loginButton {
   text-align: center;
+  padding: var(--padding-5xs) var(--padding-base);
 }

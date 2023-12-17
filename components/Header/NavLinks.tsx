@@ -29,11 +29,11 @@ const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
           </Link>
         );
       })}
-      <Link href={constants.LAUNDRY_MONITOR_LINK} target="_blank">
-        <div className={styles.loginButton}>
-          <Button>Login/Register</Button>
-        </div>
-      </Link>
+      <div className={styles.loginButton}>
+        <Button href={constants.LAUNDRY_MONITOR_LINK} target="_blank">
+          Login/Register
+        </Button>
+      </div>
     </>
   );
 };
