@@ -1,10 +1,10 @@
 import React from "react";
 import "css/globals.scss";
 import type { Metadata } from "next";
-import { Roboto } from "next/font/google";
+import { Inter } from "next/font/google";
 import { OFFICIAL_DOMAIN_URL } from "./constants";
 
-const roboto = Roboto({
+const inter = Inter({
   style: "normal",
   weight: ["100", "300", "400", "500", "700", "900"],
   subsets: [],
@@ -45,7 +45,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={roboto.className}>{children}</body>
+      <body className={inter.className}>{children}</body>
     </html>
   );
 }

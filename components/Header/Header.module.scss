@@ -8,13 +8,17 @@
   background-color: transparent;
   padding-top: 8px;
   padding-bottom: 8px;
+  transition: background-color 1s;
+}
+
+.navBarColored {
+  background-color: var(--light);
 }
 
 .innerContainer {
   flex-wrap: nowrap;
   display: flex;
   place-content: center space-between;
-  background-color: transparent;
   align-items: center;
 
   @media screen and (width < 992px) {

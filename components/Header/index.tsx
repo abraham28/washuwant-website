@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useCallback, useEffect, useState } from "react";
 import SmallHeader from "./SmallHeader";
 import LargeHeader from "./LargeHeader";
 import { Container, NavbarBrand } from "react-bootstrap";
@@ -10,8 +11,32 @@ import CompanyLogo from "public/images/washuwant-banner.png";
 import * as constants from "@/app/constants";
 
 const Header = () => {
+  const [isColored, setIsColored] = useState<boolean>(false);
+
+  const listenScrollEvent = useCallback(() => {
+    console.log(window.scrollY);
+    if (window.scrollY > 200) {
+      setIsColored(true);
+    } else {
+      setIsColored(false);
+    }
+  }, []);
+
+  useEffect(() => {
+    const eventName = "scroll";
+    window.addEventListener(eventName, listenScrollEvent);
+
+    return () => {
+      window.removeEventListener(eventName, listenScrollEvent);
+    };
+  }, [listenScrollEvent]);
+
   return (
-    <nav className={styles.navBar}>
+    <nav
+      className={`${styles.navBar} ${
+        isColored ? ` ${styles.navBarColored}` : ""
+      }`}
+    >
       <Container className={styles.innerContainer}>
         <NavbarBrand>
           <Link className={styles.brandLink} href={constants.HOME_ROUTE}>
