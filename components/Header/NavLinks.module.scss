@@ -1,0 +1,18 @@
+.link {
+  font-size: 18px;
+  color: var(--primary);
+  padding: 8px 16px;
+  text-decoration: none;
+
+  &:hover {
+    background-color: var(--light-hover);
+  }
+}
+
+.activeLink {
+  color: var(--secondary);
+}
+
+.loginButton {
+  text-align: center;
+}

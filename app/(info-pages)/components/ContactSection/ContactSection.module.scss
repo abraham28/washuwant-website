@@ -1,0 +1,30 @@
+.wrapper {
+  padding: 72px 0 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  gap: var(--padding-base);
+  padding-bottom: var(--padding-base);
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--padding-base);
+  flex-wrap: wrap;
+
+  > div {
+    width: 100%;
+
+    @media screen and (width >= 470px) {
+      width: unset;
+    }
+  }
+}

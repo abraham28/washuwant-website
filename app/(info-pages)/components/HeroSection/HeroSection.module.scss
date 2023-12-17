@@ -1,0 +1,56 @@
+.servicesPage {
+  padding: 72px 0 0 0;
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.servicesPageContents {
+  display: flex;
+  flex-direction: column;
+
+  @media screen and (width >= 992px) {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: var(--padding-base);
+  }
+}
+
+.graphic {
+  width: auto;
+  height: auto;
+  display: none;
+  @media screen and (width >= 992px) {
+    display: block;
+    width: 500px;
+  }
+}
+
+.damingLabahanWagKangMagAParent {
+  padding-top: var(--padding-41xl);
+  padding-bottom: var(--padding-41xl);
+}
+
+.damingLabahanWagContainer {
+  font-weight: bold;
+  font-size: var(--font-size-21xl);
+
+  p {
+    margin: 0;
+  }
+}
+
+.wagKangMagAlala {
+  color: var(--primary);
+}
+
+.pesosOffForContainer {
+  font-size: var(--font-size-13xl);
+  color: var(--primary);
+}
+
+.forFirstTimeOnline {
+  font-size: var(--font-size-5xl);
+  color: var(--dark);
+}

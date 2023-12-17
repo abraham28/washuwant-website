@@ -1,0 +1,49 @@
+.card {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.45), #fff);
+  backdrop-filter: var(--base-blur);
+  padding: var(--padding-base);
+  width: min-content;
+
+  @media screen and (width >= 400px) {
+    min-width: 300px;
+  }
+}
+
+.priceAndName {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: var(--padding-base);
+}
+
+.fullPackageParent {
+  display: flex;
+  flex-direction: column;
+}
+
+.packageName {
+  border-bottom: 5px solid var(--primary);
+}
+
+.inclusionList {
+  width: min-content;
+  margin-left: auto;
+  margin-right: auto;
+
+  display: grid;
+  gap: var(--padding-base);
+  padding: var(--padding-base) 0;
+}
+
+.listItem {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: var(--padding-5xs);
+  width: max-content;
+}
+
+.freeHandWashIcon3564Thumb {
+  width: 100;
+  height: auto;
+}
