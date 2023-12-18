@@ -16,10 +16,15 @@
 }
 
 .innerContainer {
-  flex-wrap: nowrap;
   display: flex;
   place-content: center space-between;
   align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+
+  @media screen and (width > 290px) {
+    justify-content: space-between;
+  }
 
   @media screen and (width < 992px) {
     --bs-gutter-x: 1.5rem;
@@ -40,11 +45,13 @@
   text-decoration: none;
 
   img {
-    width: 200px;
+    width: 100%;
+    max-width: 200px;
     height: auto;
 
     @media screen and (width >= 400px) {
       width: 300px;
+      max-width: unset;
     }
 
     @media screen and (width >= 768px) {

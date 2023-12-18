@@ -33,3 +33,9 @@
   border: 3px solid var(--primary);
   border-radius: 5px;
 }
+
+.row {
+  p {
+    overflow-wrap: break-word;
+  }
+}

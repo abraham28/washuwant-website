@@ -34,7 +34,11 @@
 .sideNavOpen {
   display: grid;
   grid-template-rows: min-content min-content;
-  width: 250px;
+  width: 100%;
+
+  @media screen and (width >= 250px) {
+    width: 250px;
+  }
 }
 
 .actionContainer {

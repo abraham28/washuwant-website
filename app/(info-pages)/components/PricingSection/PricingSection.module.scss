@@ -18,6 +18,11 @@
   gap: var(--padding-base);
   flex-wrap: wrap;
 
+  p,
+  b {
+    overflow-wrap: anywhere;
+  }
+
   > div {
     width: 100%;
 

@@ -2,7 +2,6 @@
   background: linear-gradient(180deg, rgb(255 255 255 / 45%), #fff);
   backdrop-filter: var(--base-blur);
   padding: var(--padding-base);
-  width: min-content;
 
   @media screen and (width >= 400px) {
     min-width: 300px;
@@ -13,6 +12,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: var(--padding-base);
 }
 
@@ -39,7 +39,6 @@
   align-items: center;
   justify-content: flex-start;
   gap: var(--padding-5xs);
-  width: max-content;
 }
 
 .freeHandWashIcon3564Thumb {

@@ -15,5 +15,9 @@
 
 .loginButton {
   text-align: center;
-  padding: var(--padding-5xs) var(--padding-base);
+  padding: 0;
+
+  @media screen and (width >= 180px) {
+    padding: var(--padding-5xs) var(--padding-base);
+  }
 }

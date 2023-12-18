@@ -8,6 +8,7 @@
 .servicesPageContents {
   display: flex;
   flex-direction: column;
+  overflow-wrap: break-word;
 
   @media screen and (width >= 992px) {
     flex-direction: row;
