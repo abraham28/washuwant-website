@@ -21,6 +21,14 @@
   p,
   b {
     overflow-wrap: anywhere;
+
+    @media screen and (width >= 200px) {
+      overflow-wrap: break-word;
+    }
+
+    @media screen and (width >= 300px) {
+      text-wrap: nowrap;
+    }
   }
 
   > div {
