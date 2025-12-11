@@ -10,14 +10,5 @@
 }
 
 .activeLink {
-  color: var(--secondary);
-}
-
-.loginButton {
-  text-align: center;
-  padding: 0;
-
-  @media screen and (width >= 180px) {
-    padding: var(--padding-5xs) var(--padding-base);
-  }
+  color: var(--primary);
 }

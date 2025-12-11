@@ -4,7 +4,6 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import styles from "./NavLinks.module.scss";
 import * as constants from "@/app/constants";
-import { Button } from "react-bootstrap";
 
 interface NavLinksProps {
   onClick?: () => void;
@@ -29,11 +28,6 @@ const NavLinks: React.FC<NavLinksProps> = ({ onClick }) => {
           </Link>
         );
       })}
-      <div className={styles.loginButton}>
-        <Button href={constants.LAUNDRY_MONITOR_LINK} target="_blank">
-          Login/Register
-        </Button>
-      </div>
     </>
   );
 };

@@ -1,14 +1,11 @@
 import React from "react";
-import { Button } from "react-bootstrap";
 import styles from "./Card.module.scss";
 import Image from "next/image";
-import { LAUNDRY_MONITOR_LINK } from "@/app/constants";
 
 interface CardProps {
   title: string;
   price: string;
   inclusions: Inclusion[];
-  noAction?: boolean;
   imageSrc?: string;
 }
 
@@ -19,13 +16,7 @@ type Inclusion =
     }
   | string;
 
-const Card: React.FC<CardProps> = ({
-  title,
-  price,
-  inclusions,
-  noAction = false,
-  imageSrc,
-}) => {
+const Card: React.FC<CardProps> = ({ title, price, inclusions, imageSrc }) => {
   return (
     <div className={styles.card}>
       <div className={styles.priceAndName}>
@@ -61,15 +52,6 @@ const Card: React.FC<CardProps> = ({
             </div>
           );
         })}
-        {noAction ? (
-          <></>
-        ) : (
-          <div className={styles.listItem}>
-            <Button href={LAUNDRY_MONITOR_LINK} target="_blank">
-              Avail Service
-            </Button>
-          </div>
-        )}
       </div>
     </div>
   );

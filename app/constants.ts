@@ -1,4 +1,3 @@
-export const LAUNDRY_MONITOR_LINK = "https://laundry.abrasoft.com/";
 export const FACEBOOK_LINK = "https://www.facebook.com/washuwant";
 export const FACEBOOK_LINK_TEXT = "facebook.com/WashUWant";
 export const EMAIL_ADDRESS = "thelaundrytruth@gmail.com";
