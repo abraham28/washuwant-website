@@ -14,7 +14,6 @@ const Header = () => {
   const [isColored, setIsColored] = useState<boolean>(false);
 
   const listenScrollEvent = useCallback(() => {
-    console.log(window.scrollY);
     if (window.scrollY > 200) {
       setIsColored(true);
     } else {

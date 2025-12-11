@@ -34,13 +34,18 @@ const SideNav: React.FC<SideNavProps> = ({ open, onClose }) => {
               width={0}
               height={60}
               className={styles.g1173411Icon}
-              alt=""
+              alt="Wash U Want logo"
               src="/images/washuwant-banner.png"
             />
           </div>
-          <span className={styles.closeButton} onClick={onClose}>
-            <FaTimes size={32} color="var(--secondary)" />
-          </span>
+          <button
+            type="button"
+            className={styles.closeButton}
+            onClick={onClose}
+            aria-label="Close navigation menu"
+          >
+            <FaTimes size={32} color="var(--secondary)" aria-hidden />
+          </button>
         </div>
         <div className={styles.linksContainer}>
           <NavLinks onClick={onClose} />

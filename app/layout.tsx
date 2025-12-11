@@ -11,9 +11,47 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "Wash U Want | Laundry Services",
+  metadataBase: new URL(OFFICIAL_DOMAIN_URL),
+  title: {
+    default: "Wash U Want | Laundry Services in Novaliches, Quezon City",
+    template: "%s | Wash U Want",
+  },
   description:
-    "Wash U Want provides laundry services to those who do not have time to do their own laundry, so you can focus on what's more important.",
+    "Wash U Want offers reliable wash, dry, and fold laundry services in Novaliches, Quezon City—drop off or self-service options available.",
+  keywords: [
+    "laundry service",
+    "wash and fold",
+    "self service laundry",
+    "Novaliches laundry",
+    "Quezon City laundry",
+    "laundry pickup",
+  ],
+  authors: [{ name: "Wash U Want" }],
+  applicationName: "Wash U Want",
+  openGraph: {
+    type: "website",
+    url: OFFICIAL_DOMAIN_URL,
+    siteName: "Wash U Want",
+    title: "Wash U Want | Laundry Services in Novaliches, Quezon City",
+    description:
+      "Professional wash, dry, and fold services with self-service options in Novaliches, QC.",
+    locale: "en_PH",
+    images: [
+      {
+        url: "/images/washuwant-banner.png",
+        width: 1200,
+        height: 630,
+        alt: "Wash U Want laundry services banner",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Wash U Want | Laundry Services",
+    description:
+      "Reliable wash, dry, and fold services with self-service options in Novaliches, QC.",
+    images: ["/images/washuwant-banner.png"],
+  },
   icons: [
     { url: "/favicon.ico", sizes: "any" },
     { type: "image/x-icon", url: "/favicon.ico" },
@@ -36,6 +74,10 @@ export const metadata: Metadata = {
     canonical: OFFICIAL_DOMAIN_URL,
   },
   manifest: "/manifest.webmanifest",
+  themeColor: "#0088aa",
+  other: {
+    "x-ua-compatible": "IE=edge",
+  },
 };
 
 export default function RootLayout({

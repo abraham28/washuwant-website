@@ -1,4 +1,5 @@
 import { MetadataRoute } from "next";
+import { OFFICIAL_DOMAIN_URL } from "./constants";
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -6,9 +7,9 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/private/", "/admin/"], // Add any other disallowed paths
       },
     ],
-    sitemap: "https://washuwant.com/sitemap.xml",
+    sitemap: `${OFFICIAL_DOMAIN_URL}sitemap.xml`,
+    host: OFFICIAL_DOMAIN_URL.replace(/\/$/, ""),
   };
 }

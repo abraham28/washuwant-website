@@ -18,9 +18,14 @@ const Header = () => {
   return (
     <div className={styles.sideNavOpenner}>
       <SideNav open={navOpen} onClose={closeNav} />
-      <span onClick={openNav}>
-        <FaBars size={32} color="var(--primary)" />
-      </span>
+      <button
+        type="button"
+        className={styles.menuButton}
+        onClick={openNav}
+        aria-label="Open navigation menu"
+      >
+        <FaBars size={32} color="var(--primary)" aria-hidden />
+      </button>
     </div>
   );
 };

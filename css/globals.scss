@@ -67,6 +67,11 @@ body {
   }
 }
 
+:focus-visible {
+  outline: 3px solid var(--secondary);
+  outline-offset: 2px;
+}
+
 .btn {
   border: 0 !important;
   border-radius: 100px !important;

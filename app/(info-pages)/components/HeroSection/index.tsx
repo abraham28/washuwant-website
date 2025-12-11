@@ -10,11 +10,11 @@ const HeroSection = () => {
       <Container className={styles.servicesPageContents}>
         <div>
           <div className={styles.damingLabahanWagKangMagAParent}>
-            <h2 className={styles.damingLabahanWagContainer}>
+            <h1 className={styles.damingLabahanWagContainer}>
               <p className={styles.damingLabahan}>Daming labahan?</p>
               <p className={styles.wagKangMagAlala}>Wag kang mag-alala</p>
               <p className={styles.damingLabahan}>kami na maglalaba</p>
-            </h2>
+            </h1>
             <p className={styles.iwanMoNalang}>
               Iwan mo nalang yung laundry mo kami na mag lalaba, pag balik mo
               ready na yan!
