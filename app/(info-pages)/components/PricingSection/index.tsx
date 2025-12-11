@@ -11,7 +11,7 @@ const PricingSection = () => {
         <div className={styles.cards}>
           <Card
             title="Full Package"
-            price="₱188"
+            price="₱200"
             imageSrc="/images/full-package.png"
             inclusions={[
               "Wash",
@@ -24,7 +24,7 @@ const PricingSection = () => {
           />
           <Card
             title="Self Service"
-            price="₱128"
+            price="₱140"
             imageSrc="/images/diy.png"
             inclusions={[
               "Wash",
