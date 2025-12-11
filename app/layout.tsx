@@ -1,6 +1,6 @@
 import React from "react";
 import "css/globals.scss";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import { OFFICIAL_DOMAIN_URL } from "./constants";
 
@@ -74,10 +74,13 @@ export const metadata: Metadata = {
     canonical: OFFICIAL_DOMAIN_URL,
   },
   manifest: "/manifest.webmanifest",
-  themeColor: "#0088aa",
   other: {
     "x-ua-compatible": "IE=edge",
   },
+};
+
+export const viewport: Viewport = {
+  themeColor: "#0088aa",
 };
 
 export default function RootLayout({
