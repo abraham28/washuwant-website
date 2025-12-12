@@ -1,6 +1,7 @@
 import React from "react";
 import HeroSection from "./components/HeroSection";
 import PricingSection from "./components/PricingSection";
+import FAQSection from "./components/FAQSection";
 import ContactSection from "./components/ContactSection";
 
 const Page = () => {
@@ -8,6 +9,7 @@ const Page = () => {
     <>
       <HeroSection />
       <PricingSection />
+      <FAQSection />
       <ContactSection />
     </>
   );
