@@ -1,5 +1,5 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
+import { Col, Container, Row, Button } from "react-bootstrap";
 import styles from "./ContactSection.module.scss";
 import Link from "next/link";
 import Maps from "../Maps";
@@ -14,6 +14,16 @@ const ContactSection = () => {
           <Col lg={6}>
             <h3>Address</h3>
             <p>{constants.PHYSICAL_ADDRESS}</p>
+            <div className={styles.directionsButton}>
+              <Button
+                href={constants.GOOGLE_MAPS_LINK}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={styles.directionsCta}
+              >
+                Get Directions
+              </Button>
+            </div>
 
             <h3>Working Hours</h3>
             <p>8 AM to 8 PM</p>
@@ -45,10 +55,11 @@ const ContactSection = () => {
             <h3>Google Maps Location</h3>
             <p>
               <Link
-                href="https://maps.app.goo.gl/ek3uBkQmeBAGxFwr6"
+                href={constants.GOOGLE_MAPS_LINK}
                 target="_blank"
+                rel="noopener noreferrer"
               >
-                https://maps.app.goo.gl/ek3uBkQmeBAGxFwr6
+                {constants.GOOGLE_MAPS_LINK}
               </Link>
             </p>
             <Maps className={styles.mapContainer} />

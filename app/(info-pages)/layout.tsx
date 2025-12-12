@@ -1,6 +1,6 @@
 import React from "react";
 import Header from "@/components/Header";
-import { COPYRIGHT } from "@/app/constants";
+import Footer from "@/components/Footer";
 import styles from "./layout.module.scss";
 
 export default function InfoPagesLayout({
@@ -13,7 +13,7 @@ export default function InfoPagesLayout({
       <Header />
       <main className={styles.mainContainer}>
         {children}
-        <div className="text-center">{COPYRIGHT}</div>
+        <Footer />
       </main>
     </>
   );
