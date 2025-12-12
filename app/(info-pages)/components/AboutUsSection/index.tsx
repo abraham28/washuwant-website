@@ -14,14 +14,15 @@ const AboutUsSection = () => {
             Quezon City.
           </p>
           <p>
-            We understand that life gets busy, and laundry can be time-consuming.
-            That&apos;s why we&apos;re here to help! Our mission is simple:{" "}
-            <strong>{TAGLINE}</strong>
+            We understand that life gets busy, and laundry can be
+            time-consuming. That&apos;s why we&apos;re here to help! Our mission
+            is simple: <strong>{TAGLINE}</strong>
           </p>
           <p>
-            Whether you need our full-service wash, dry, and fold package or prefer
-            to use our self-service facilities, we&apos;re committed to providing
-            quality laundry services that save you time and give you peace of mind.
+            Whether you need our full-service wash, dry, and fold package or
+            prefer to use our self-service facilities, we&apos;re committed to
+            providing quality laundry services that save you time and give you
+            peace of mind.
           </p>
           <p>
             Visit us at our location in Santa Monica, Novaliches, and experience
@@ -34,4 +35,3 @@ const AboutUsSection = () => {
 };
 
 export default AboutUsSection;
-
