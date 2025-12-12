@@ -1,7 +1,8 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Button } from "react-bootstrap";
 import styles from "./PricingSection.module.scss";
 import Card from "../Card";
+import { GOOGLE_MAPS_LINK } from "@/app/constants";
 
 const PricingSection = () => {
   return (
@@ -35,6 +36,17 @@ const PricingSection = () => {
               { name: "Fabric Cologne", excluded: true },
             ]}
           />
+        </div>
+        <div className={styles.ctaContainer}>
+          <Button
+            href={GOOGLE_MAPS_LINK}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.directionsButton}
+            size="lg"
+          >
+            Get Directions
+          </Button>
         </div>
       </Container>
     </Container>
